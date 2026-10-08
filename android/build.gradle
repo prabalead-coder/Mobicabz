@@ -1,0 +1,41 @@
+buildscript {
+    ext {
+        buildToolsVersion = "36.0.0"
+        minSdkVersion = 24
+        compileSdkVersion = 36
+        targetSdkVersion = 36
+        ndkVersion = "27.1.12297006"
+        kotlinVersion = "2.1.20"
+    }
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle")
+        classpath("com.facebook.react:react-native-gradle-plugin")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
+        classpath("com.google.gms:google-services:4.4.2")
+    }
+}
+
+// Older native modules shipped without an Android namespace. AGP 8 requires one.
+subprojects { subproject ->
+    subproject.pluginManager.withPlugin("com.android.library") {
+        def androidExt = subproject.extensions.findByName("android")
+        if (androidExt != null && androidExt.namespace == null) {
+            def manifestFile = new File(subproject.projectDir, "src/main/AndroidManifest.xml")
+            if (!manifestFile.exists()) {
+                manifestFile = androidExt.sourceSets.main.manifest.srcFile
+            }
+            if (manifestFile != null && manifestFile.exists()) {
+                def matcher = manifestFile.getText("UTF-8") =~ /package="([^"]+)"/
+                if (matcher.find()) {
+                    androidExt.namespace = matcher.group(1)
+                }
+            }
+        }
+    }
+}
+
+apply plugin: "com.facebook.react.rootproject"
