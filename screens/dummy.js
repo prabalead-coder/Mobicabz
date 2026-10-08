@@ -1,0 +1,55 @@
+const config = {
+apiCheckVersion: '<apiUrl>',
+
+//V1 URL
+apiGetOtp: '<apiUrl>',
+apiUrl: '<apiUrl>',
+apiPostBookings: '<apiUrl>',
+apiPostKmReading: '<apiUrl>',
+apiPostLocation: '<apiUrl>',
+apiGetStatus: '<apiUrl>',
+apiPostFinalSubmit: '<apiUrl>',
+apiPostErrReport: '<apiUrl>',
+apiPostUpload: '<apiUrl>',
+apiGetIdle: '<apiUrl>',
+apiPostTripHistory: '<apiUrl>',
+//V1 Fallback URL
+apiGetOtpAlt: '<apiUrl>',
+apiUrlAlt: '<apiUrl>',
+apiPostBookingsAlt: '<apiUrl>',
+apiPostKmReadingAlt: '<apiUrl>',
+apiPostLocationAlt: '<apiUrl>',
+apiGetStatusAlt: '<apiUrl>',
+apiPostFinalSubmitAlt: '<apiUrl>',
+apiPostErrReportAlt: '<apiUrl>',
+apiPostUploadAlt: '<apiUrl>',
+apiGetIdleAlt: '<apiUrl>',
+apiPostTripHistoryAlt: '<apiUrl>',
+
+//V2 URL
+apiGetOtp: '<apiUrl>',
+apiUrl: '<apiUrl>',
+apiPostBookings: '<apiUrl>',
+apiPostKmReading: '<apiUrl>',
+apiPostLocation: '<apiUrl>',
+apiGetStatus: '<apiUrl>',
+apiPostFinalSubmit: '<apiUrl>',
+apiPostErrReport: '<apiUrl>',
+apiPostUpload: '<apiUrl>',
+apiGetIdle: '<apiUrl>',
+apiPostTripHistory: '<apiUrl>',
+//V2 Fallback URL
+apiGetOtpAlt: '<apiUrl>',
+apiUrlAlt: '<apiUrl>',
+apiPostBookingsAlt: '<apiUrl>',
+apiPostKmReadingAlt: '<apiUrl>',
+apiPostLocationAlt: '<apiUrl>',
+apiGetStatusAlt: '<apiUrl>',
+apiPostFinalSubmitAlt: '<apiUrl>',
+apiPostErrReportAlt: '<apiUrl>',
+apiPostUploadAlt: '<apiUrl>',
+apiGetIdleAlt: '<apiUrl>',
+apiPostTripHistoryAlt: '<apiUrl>',
+}
+
+export default config;
