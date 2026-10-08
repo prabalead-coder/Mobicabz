@@ -20,7 +20,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {useNavigation} from '@react-navigation/native';
 import translations from '../translations';
 import translationManager from '../translationManager';
-import messaging from '@react-native-firebase/messaging';
+import {getMessaging, getToken as getFcmToken} from '@react-native-firebase/messaging';
 import config from '../config';
 import {MAPPLS_CONFIG} from '../config';
 import SQLite from 'react-native-sqlite-storage';
@@ -75,7 +75,7 @@ const LoginScreen = ({language, route}) => {
   // to get the FCM Token
   const getToken = async () => {
     try {
-      const token = await messaging().getToken();
+      const token = await getFcmToken(getMessaging());
       console.log('FCM Token Generated');
       log(`LOGIN_SCREEN: getToken - FCM token generated.`);
       setFcmToken(token);

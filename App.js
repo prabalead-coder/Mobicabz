@@ -17,7 +17,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {log, readLog} from './components/Logger';
 import config from './config';
 import DeviceInfo from 'react-native-device-info';
-import {check, request, PERMISSIONS, RESULTS} from 'react-native-permissions';
+import {requestNotifications, RESULTS} from 'react-native-permissions';
 import {useNetInfo} from '@react-native-community/netinfo';
 import ETCLoader from './components/ETCLoader';
 import CheckInternet from './components/AuthContext';
@@ -243,18 +243,23 @@ const App = () => {
 
   const requestNotificationPermission = async () => {
     if (Platform.OS === 'android' && Platform.Version >= 33) {
-      const result = await request(PERMISSIONS.ANDROID.POST_NOTIFICATIONS);
-      if (result === RESULTS.GRANTED) {
-        console.log('Notification permission granted.');
-        log('APP: Notification permission granted.');
-      } else if (result === RESULTS.DENIED) {
-        console.log('Notification permission denied.');
-        log('APP: Notification permission denied.');
-      } else {
-        console.log(
-          'Something else is happened in Notification permission.',
-          result,
-        );
+      try {
+        const {status} = await requestNotifications();
+        if (status === RESULTS.GRANTED) {
+          console.log('Notification permission granted.');
+          log('APP: Notification permission granted.');
+        } else if (status === RESULTS.DENIED) {
+          console.log('Notification permission denied.');
+          log('APP: Notification permission denied.');
+        } else {
+          console.log(
+            'Something else is happened in Notification permission.',
+            status,
+          );
+        }
+      } catch (error) {
+        console.warn('Error requesting notification permission:', error);
+        log(`APP: Error requesting notification permission: ${error.message}`);
       }
     }
   };
