@@ -61,19 +61,36 @@ const config = {
 
   // ------------------------------------------------------------------------------
   //TravelEx Database(65)....
-  // apiServer: 'TX',
-  // apiGetVersion: 'https://etcdriverapp.in/TravelExApi/App/Version',
-  // apiGetOtp: 'https://etcdriverapp.in/TravelExApi/App/GetOtp?ph=',
-  // apiUrl: 'https://etcdriverapp.in/TravelExApi/App/',
-  // apiPostBookings: 'https://etcdriverapp.in/TravelExApi/App/Bookings?did=',
-  // apiPostKmReading: 'https://etcdriverapp.in/TravelExApi/App/KmReading?tripNo=',
-  // apiPostLocation: 'https://etcdriverapp.in/TravelExApi/App/Location?loc=',
-  // apiGetStatus: 'https://etcdriverapp.in/TravelExApi/App/Status?tripNo=',
-  // apiPostFinalSubmit: 'https://etcdriverapp.in/TravelExApi/App/Complete?tid=',
-  // apiPostErrReport: 'https://etcdriverapp.in/TravelExApi/App/ErrReport?did=',
-  // apiPostUpload: 'https://etcdriverapp.in/TravelExApi/App/Upload?tid=',
-  // apiGetIdle: 'https://etcdriverapp.in/TravelExApi/App/idle?tid=',
-  // apiPostTripHistory: 'https://etcdriverapp.in/TravelExApi/App/TripHistory?did=',
+  apiServer: 'TX',
+  apiGetVersion: 'https://etcdriverapp.in/TravelExApi/App/Version',
+  apiGetOtp: 'https://etcdriverapp.in/TravelExApi/App/GetOtp?ph=',
+  apiUrl: 'https://etcdriverapp.in/TravelExApi/App/',
+  apiPostBookings: 'https://etcdriverapp.in/TravelExApi/App/Bookings?did=',
+  apiPostKmReading: 'https://etcdriverapp.in/TravelExApi/App/KmReading?tripNo=',
+  apiPostLocation: 'https://etcdriverapp.in/TravelExApi/App/Location?loc=',
+  apiGetStatus: 'https://etcdriverapp.in/TravelExApi/App/Status?tripNo=',
+  apiPostFinalSubmit: 'https://etcdriverapp.in/TravelExApi/App/Complete?tid=',
+  apiPostErrReport: 'https://etcdriverapp.in/TravelExApi/App/ErrReport?did=',
+  apiPostUpload: 'https://etcdriverapp.in/TravelExApi/App/Upload?tid=',
+  apiGetIdle: 'https://etcdriverapp.in/TravelExApi/App/idle?tid=',
+  apiPostTripHistory: 'https://etcdriverapp.in/TravelExApi/App/TripHistory?did=',
+
+  // Local Development Server(221) (Fallback)....
+  apiGetVersionAlt: 'https://etcdriverapp.in/TravelExApi/App/Version',
+  apiGetOtpAlt: 'https://etcdriverapp.in/TravelExApi/App/GetOtp?ph=',
+  apiUrlAlt: 'https://etcdriverapp.in/TravelExApi/App/',
+  apiPostBookingsAlt: 'https://etcdriverapp.in/TravelExApi/App/Bookings?did=',
+  apiPostKmReadingAlt:
+    'https://etcdriverapp.in/TravelExApi/App/KmReading?tripNo=',
+  apiPostLocationAlt: 'https://etcdriverapp.in/TravelExApi/App/Location?loc=',
+  apiGetStatusAlt: 'https://etcdriverapp.in/TravelExApi/App/Status?tripNo=',
+  apiPostFinalSubmitAlt:
+    'https://etcdriverapp.in/TravelExApi/App/Complete?tid=',
+  apiPostErrReportAlt: 'https://etcdriverapp.in/TravelExApi/App/ErrReport?did=',
+  apiPostUploadAlt: 'https://etcdriverapp.in/TravelExApi/App/Upload?tid=',
+  apiGetIdleAlt: 'https://etcdriverapp.in/TravelExApi/App/idle?tid=',
+  apiPostTripHistoryAlt:
+    'https://etcdriverapp.in/TravelExApi/App/TripHistory?did=',
 
   // // ------------------------------------------------------------------------------ 
   // //TravelEx Database(Alternate http Server)....
@@ -93,33 +110,33 @@ const config = {
 
 
   //Local Development Server(221)....
-  apiServer: '221',
-  apiGetVersion: 'http://192.168.1.13:8095/WebApi/App/Version',
-  apiGetOtp: 'http://192.168.1.13:8095/WebApi/App/GetOtp?ph=',
-  apiUrl: 'http://192.168.1.13:8095/WebApi/App/',
-  apiPostBookings: 'http://192.168.1.13:8095/WebApi/App/Bookings?did=',
-  apiPostKmReading: 'http://192.168.1.13:8095/WebApi/App/KmReading?tripNo=',
-  apiPostLocation: 'http://192.168.1.13:8095/WebApi/App/Location?loc=',
-  apiGetStatus: 'http://192.168.1.13:8095/WebApi/App/Status?tripNo=',
-  apiPostFinalSubmit: 'http://192.168.1.13:8095/WebApi/App/Complete?tid=',
-  apiPostErrReport: 'http://192.168.1.13:8095/WebApi/App/ErrReport?did=',
-  apiPostUpload: 'http://192.168.1.13:8095/WebApi/App/Upload?tid=',
-  apiGetIdle: 'http://192.168.1.13:8095/WebApi/App/idle?tid=',
-  apiPostTripHistory: 'http://192.168.1.13:8095/WebApi/App/TripHistory?did=',
+  // apiServer: '221',
+  // apiGetVersion: 'http://192.168.1.13:8095/WebApi/App/Version',
+  // apiGetOtp: 'http://192.168.1.13:8095/WebApi/App/GetOtp?ph=',
+  // apiUrl: 'http://192.168.1.13:8095/WebApi/App/',
+  // apiPostBookings: 'http://192.168.1.13:8095/WebApi/App/Bookings?did=',
+  // apiPostKmReading: 'http://192.168.1.13:8095/WebApi/App/KmReading?tripNo=',
+  // apiPostLocation: 'http://192.168.1.13:8095/WebApi/App/Location?loc=',
+  // apiGetStatus: 'http://192.168.1.13:8095/WebApi/App/Status?tripNo=',
+  // apiPostFinalSubmit: 'http://192.168.1.13:8095/WebApi/App/Complete?tid=',
+  // apiPostErrReport: 'http://192.168.1.13:8095/WebApi/App/ErrReport?did=',
+  // apiPostUpload: 'http://192.168.1.13:8095/WebApi/App/Upload?tid=',
+  // apiGetIdle: 'http://192.168.1.13:8095/WebApi/App/idle?tid=',
+  // apiPostTripHistory: 'http://192.168.1.13:8095/WebApi/App/TripHistory?did=',
 
   // Local Development Server(221) (Fallback)....
-  apiGetVersionAlt: 'http://192.168.1.13:8095/WebApi/App/Version',
-  apiGetOtpAlt: 'http://192.168.1.13:8095/WebApi/App/GetOtp?ph=',
-  apiUrlAlt: 'http://192.168.1.13:8095/WebApi/App/',
-  apiPostBookingsAlt: 'http://192.168.1.13:8095/WebApi/App/Bookings?did=',
-  apiPostKmReadingAlt: 'http://192.168.1.13:8095/WebApi/App/KmReading?tripNo=',
-  apiPostLocationAlt: 'http://192.168.1.13:8095/WebApi/App/Location?loc=',
-  apiGetStatusAlt: 'http://192.168.1.13:8095/WebApi/App/Status?tripNo=',
-  apiPostFinalSubmitAlt: 'http://192.168.1.13:8095/WebApi/App/Complete?tid=',
-  apiPostErrReportAlt: 'http://192.168.1.13:8095/WebApi/App/ErrReport?did=',
-  apiPostUploadAlt: 'http://192.168.1.13:8095/WebApi/App/Upload?tid=',
-  apiGetIdleAlt: 'http://192.168.1.13:8095/WebApi/App/idle?tid=',
-  apiPostTripHistoryAlt: 'http://192.168.1.13:8095/WebApi/App/TripHistory?did=',
+  // apiGetVersionAlt: 'http://192.168.1.13:8095/WebApi/App/Version',
+  // apiGetOtpAlt: 'http://192.168.1.13:8095/WebApi/App/GetOtp?ph=',
+  // apiUrlAlt: 'http://192.168.1.13:8095/WebApi/App/',
+  // apiPostBookingsAlt: 'http://192.168.1.13:8095/WebApi/App/Bookings?did=',
+  // apiPostKmReadingAlt: 'http://192.168.1.13:8095/WebApi/App/KmReading?tripNo=',
+  // apiPostLocationAlt: 'http://192.168.1.13:8095/WebApi/App/Location?loc=',
+  // apiGetStatusAlt: 'http://192.168.1.13:8095/WebApi/App/Status?tripNo=',
+  // apiPostFinalSubmitAlt: 'http://192.168.1.13:8095/WebApi/App/Complete?tid=',
+  // apiPostErrReportAlt: 'http://192.168.1.13:8095/WebApi/App/ErrReport?did=',
+  // apiPostUploadAlt: 'http://192.168.1.13:8095/WebApi/App/Upload?tid=',
+  // apiGetIdleAlt: 'http://192.168.1.13:8095/WebApi/App/idle?tid=',
+  // apiPostTripHistoryAlt: 'http://192.168.1.13:8095/WebApi/App/TripHistory?did=',
 
 
   //Local Development Server(221)....
